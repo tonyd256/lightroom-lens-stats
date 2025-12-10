@@ -1,0 +1,577 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXContainerItemProxy section */
+		EAED0A3F2EE8E6FE00254983 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EAED0A252EE8E6FC00254983 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EAED0A2C2EE8E6FC00254983;
+			remoteInfo = LensStatsAnalyzer;
+		};
+		EAED0A492EE8E6FE00254983 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EAED0A252EE8E6FC00254983 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EAED0A2C2EE8E6FC00254983;
+			remoteInfo = LensStatsAnalyzer;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		EAED0A2D2EE8E6FD00254983 /* LensStatsAnalyzer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LensStatsAnalyzer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EAED0A3E2EE8E6FE00254983 /* LensStatsAnalyzerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LensStatsAnalyzerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EAED0A482EE8E6FE00254983 /* LensStatsAnalyzerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LensStatsAnalyzerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		EAED0A5F2EE8E7FE00254983 /* Exceptions for "LensStatsAnalyzer" folder in "LensStatsAnalyzer" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = EAED0A2C2EE8E6FC00254983 /* LensStatsAnalyzer */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		EAED0A2F2EE8E6FD00254983 /* LensStatsAnalyzer */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				EAED0A5F2EE8E7FE00254983 /* Exceptions for "LensStatsAnalyzer" folder in "LensStatsAnalyzer" target */,
+			);
+			path = LensStatsAnalyzer;
+			sourceTree = "<group>";
+		};
+		EAED0A412EE8E6FE00254983 /* LensStatsAnalyzerTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = LensStatsAnalyzerTests;
+			sourceTree = "<group>";
+		};
+		EAED0A4B2EE8E6FE00254983 /* LensStatsAnalyzerUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = LensStatsAnalyzerUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EAED0A2A2EE8E6FC00254983 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EAED0A3B2EE8E6FE00254983 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EAED0A452EE8E6FE00254983 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EAED0A242EE8E6FC00254983 = {
+			isa = PBXGroup;
+			children = (
+				EAED0A2F2EE8E6FD00254983 /* LensStatsAnalyzer */,
+				EAED0A412EE8E6FE00254983 /* LensStatsAnalyzerTests */,
+				EAED0A4B2EE8E6FE00254983 /* LensStatsAnalyzerUITests */,
+				EAED0A2E2EE8E6FD00254983 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EAED0A2E2EE8E6FD00254983 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EAED0A2D2EE8E6FD00254983 /* LensStatsAnalyzer.app */,
+				EAED0A3E2EE8E6FE00254983 /* LensStatsAnalyzerTests.xctest */,
+				EAED0A482EE8E6FE00254983 /* LensStatsAnalyzerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EAED0A2C2EE8E6FC00254983 /* LensStatsAnalyzer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EAED0A522EE8E6FE00254983 /* Build configuration list for PBXNativeTarget "LensStatsAnalyzer" */;
+			buildPhases = (
+				EAED0A292EE8E6FC00254983 /* Sources */,
+				EAED0A2A2EE8E6FC00254983 /* Frameworks */,
+				EAED0A2B2EE8E6FC00254983 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				EAED0A2F2EE8E6FD00254983 /* LensStatsAnalyzer */,
+			);
+			name = LensStatsAnalyzer;
+			packageProductDependencies = (
+			);
+			productName = LensStatsAnalyzer;
+			productReference = EAED0A2D2EE8E6FD00254983 /* LensStatsAnalyzer.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EAED0A3D2EE8E6FE00254983 /* LensStatsAnalyzerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EAED0A552EE8E6FE00254983 /* Build configuration list for PBXNativeTarget "LensStatsAnalyzerTests" */;
+			buildPhases = (
+				EAED0A3A2EE8E6FE00254983 /* Sources */,
+				EAED0A3B2EE8E6FE00254983 /* Frameworks */,
+				EAED0A3C2EE8E6FE00254983 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EAED0A402EE8E6FE00254983 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				EAED0A412EE8E6FE00254983 /* LensStatsAnalyzerTests */,
+			);
+			name = LensStatsAnalyzerTests;
+			packageProductDependencies = (
+			);
+			productName = LensStatsAnalyzerTests;
+			productReference = EAED0A3E2EE8E6FE00254983 /* LensStatsAnalyzerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		EAED0A472EE8E6FE00254983 /* LensStatsAnalyzerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EAED0A582EE8E6FE00254983 /* Build configuration list for PBXNativeTarget "LensStatsAnalyzerUITests" */;
+			buildPhases = (
+				EAED0A442EE8E6FE00254983 /* Sources */,
+				EAED0A452EE8E6FE00254983 /* Frameworks */,
+				EAED0A462EE8E6FE00254983 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EAED0A4A2EE8E6FE00254983 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				EAED0A4B2EE8E6FE00254983 /* LensStatsAnalyzerUITests */,
+			);
+			name = LensStatsAnalyzerUITests;
+			packageProductDependencies = (
+			);
+			productName = LensStatsAnalyzerUITests;
+			productReference = EAED0A482EE8E6FE00254983 /* LensStatsAnalyzerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EAED0A252EE8E6FC00254983 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1640;
+				LastUpgradeCheck = 1640;
+				TargetAttributes = {
+					EAED0A2C2EE8E6FC00254983 = {
+						CreatedOnToolsVersion = 16.4;
+					};
+					EAED0A3D2EE8E6FE00254983 = {
+						CreatedOnToolsVersion = 16.4;
+						TestTargetID = EAED0A2C2EE8E6FC00254983;
+					};
+					EAED0A472EE8E6FE00254983 = {
+						CreatedOnToolsVersion = 16.4;
+						TestTargetID = EAED0A2C2EE8E6FC00254983;
+					};
+				};
+			};
+			buildConfigurationList = EAED0A282EE8E6FC00254983 /* Build configuration list for PBXProject "LensStatsAnalyzer" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EAED0A242EE8E6FC00254983;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = EAED0A2E2EE8E6FD00254983 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EAED0A2C2EE8E6FC00254983 /* LensStatsAnalyzer */,
+				EAED0A3D2EE8E6FE00254983 /* LensStatsAnalyzerTests */,
+				EAED0A472EE8E6FE00254983 /* LensStatsAnalyzerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EAED0A2B2EE8E6FC00254983 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EAED0A3C2EE8E6FE00254983 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EAED0A462EE8E6FE00254983 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EAED0A292EE8E6FC00254983 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EAED0A3A2EE8E6FE00254983 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EAED0A442EE8E6FE00254983 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EAED0A402EE8E6FE00254983 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EAED0A2C2EE8E6FC00254983 /* LensStatsAnalyzer */;
+			targetProxy = EAED0A3F2EE8E6FE00254983 /* PBXContainerItemProxy */;
+		};
+		EAED0A4A2EE8E6FE00254983 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EAED0A2C2EE8E6FC00254983 /* LensStatsAnalyzer */;
+			targetProxy = EAED0A492EE8E6FE00254983 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		EAED0A502EE8E6FE00254983 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 7X7CX2JX3F;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EAED0A512EE8E6FE00254983 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 7X7CX2JX3F;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		EAED0A532EE8E6FE00254983 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
+				CODE_SIGN_ENTITLEMENTS = LensStatsAnalyzer/LensStatsAnalyzer.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7X7CX2JX3F;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LensStatsAnalyzer/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tonywithasony.LensStatsAnalyzer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		EAED0A542EE8E6FE00254983 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
+				CODE_SIGN_ENTITLEMENTS = LensStatsAnalyzer/LensStatsAnalyzer.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7X7CX2JX3F;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LensStatsAnalyzer/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tonywithasony.LensStatsAnalyzer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		EAED0A562EE8E6FE00254983 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7X7CX2JX3F;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tonywithasony.LensStatsAnalyzerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LensStatsAnalyzer.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/LensStatsAnalyzer";
+			};
+			name = Debug;
+		};
+		EAED0A572EE8E6FE00254983 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7X7CX2JX3F;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tonywithasony.LensStatsAnalyzerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LensStatsAnalyzer.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/LensStatsAnalyzer";
+			};
+			name = Release;
+		};
+		EAED0A592EE8E6FE00254983 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7X7CX2JX3F;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tonywithasony.LensStatsAnalyzerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = LensStatsAnalyzer;
+			};
+			name = Debug;
+		};
+		EAED0A5A2EE8E6FE00254983 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7X7CX2JX3F;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tonywithasony.LensStatsAnalyzerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = LensStatsAnalyzer;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EAED0A282EE8E6FC00254983 /* Build configuration list for PBXProject "LensStatsAnalyzer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EAED0A502EE8E6FE00254983 /* Debug */,
+				EAED0A512EE8E6FE00254983 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EAED0A522EE8E6FE00254983 /* Build configuration list for PBXNativeTarget "LensStatsAnalyzer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EAED0A532EE8E6FE00254983 /* Debug */,
+				EAED0A542EE8E6FE00254983 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EAED0A552EE8E6FE00254983 /* Build configuration list for PBXNativeTarget "LensStatsAnalyzerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EAED0A562EE8E6FE00254983 /* Debug */,
+				EAED0A572EE8E6FE00254983 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EAED0A582EE8E6FE00254983 /* Build configuration list for PBXNativeTarget "LensStatsAnalyzerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EAED0A592EE8E6FE00254983 /* Debug */,
+				EAED0A5A2EE8E6FE00254983 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EAED0A252EE8E6FC00254983 /* Project object */;
+}
