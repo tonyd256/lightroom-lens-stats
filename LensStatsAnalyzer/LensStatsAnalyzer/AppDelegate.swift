@@ -23,7 +23,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         let openPanel = NSOpenPanel()
         openPanel.title = "Select your Lightroom Catalog"
         openPanel.message = "Choose your .lrcat file"
-        openPanel.allowedContentTypes = [UTType(filenameExtension: "lrcat")!]
+        if #available(macOS 11.0, *) {
+            openPanel.allowedContentTypes = [UTType(filenameExtension: "lrcat")!]
+        } else {
+            openPanel.allowedFileTypes = ["lrcat"]
+        }
         openPanel.allowsMultipleSelection = false
         openPanel.canChooseDirectories = false
         
@@ -41,7 +45,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         let savePanel = NSSavePanel()
         savePanel.title = "Save Statistics As"
         savePanel.nameFieldStringValue = "lens_stats.csv"
-        savePanel.allowedContentTypes = [UTType.commaSeparatedText]
+        if #available(macOS 11.0, *) {
+            savePanel.allowedContentTypes = [.commaSeparatedText]
+        } else {
+            savePanel.allowedFileTypes = ["csv"]
+        }
         
         savePanel.begin { response in
             guard response == .OK, var outputURL = savePanel.url else {
@@ -72,57 +80,44 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         let response = alert.runModal()
         
         if response == .alertFirstButtonReturn {
-            let days = input.stringValue
-            self.runAnalysis(catalogURL: catalogURL, outputURL: outputURL, days: days)
+            if let days = Int(input.stringValue), days > 0 {
+                self.runAnalysis(catalogURL: catalogURL, outputURL: outputURL, days: days)
+            } else {
+                showError("Please enter a valid number of days")
+            }
         } else {
             NSApp.terminate(nil)
         }
     }
     
-    func runAnalysis(catalogURL: URL, outputURL: URL, days: String) {
-        guard let scriptPath = Bundle.main.path(forResource: "analyze_lenses", ofType: "py") else {
-            showError("Python script not found in app bundle")
-            return
-        }
-        
-        // Show progress window
+    func runAnalysis(catalogURL: URL, outputURL: URL, days: Int) {
         showProgressWindow()
         
-        // Run in background thread
         DispatchQueue.global(qos: .userInitiated).async {
-            let process = Process()
-            process.executableURL = URL(fileURLWithPath: "/usr/bin/python3")
-            process.arguments = [
-                scriptPath,
-                catalogURL.path,
-                outputURL.path,
-                days
-            ]
-            
-            let pipe = Pipe()
-            process.standardOutput = pipe
-            process.standardError = pipe
+            let analyzer = LensAnalyzer()
             
             do {
-                try process.run()
-                process.waitUntilExit()
+                let stats = try analyzer.analyze(catalogPath: catalogURL.path, daysBack: days)
                 
-                let data = pipe.fileHandleForReading.readDataToEndOfFile()
-                let output = String(data: data, encoding: .utf8) ?? ""
+                if stats.isEmpty {
+                    DispatchQueue.main.async {
+                        self.hideProgressWindow()
+                        self.showError("No lens data found in catalog.\n\nThis could mean:\n• No photos in the specified time range\n• Photos don't have lens EXIF data\n• Catalog metadata hasn't been harvested yet")
+                    }
+                    return
+                }
+                
+                try analyzer.writeCSV(stats: stats, to: outputURL)
                 
                 DispatchQueue.main.async {
                     self.hideProgressWindow()
-                    
-                    if process.terminationStatus == 0 {
-                        self.showSuccess(outputURL: outputURL, output: output)
-                    } else {
-                        self.showError("Analysis failed:\n\n\(output)")
-                    }
+                    self.showSuccess(outputURL: outputURL, stats: stats)
                 }
+                
             } catch {
                 DispatchQueue.main.async {
                     self.hideProgressWindow()
-                    self.showError("Failed to run analysis: \(error.localizedDescription)")
+                    self.showError("Analysis failed: \(error.localizedDescription)")
                 }
             }
         }
@@ -167,22 +162,23 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         }
     }
     
-    func showSuccess(outputURL: URL, output: String) {
+    func showSuccess(outputURL: URL, stats: [LensStats]) {
         let alert = NSAlert()
         alert.messageText = "Analysis Complete!"
-        alert.informativeText = "Statistics saved to:\n\(outputURL.path)"
+        
+        var message = "Statistics saved to:\n\(outputURL.path)\n\nFound \(stats.count) lenses"
+        
+        if stats.count > 0 {
+            message += "\n\nTop 5 most-used lenses:"
+            for (index, stat) in stats.prefix(5).enumerated() {
+                message += "\n\(index + 1). \(stat.lensName): \(stat.totalPhotos) photos (\(String(format: "%.1f", stat.keeperPercentage))% keepers)"
+            }
+        }
+        
+        alert.informativeText = message
         alert.addButton(withTitle: "Open CSV")
         alert.addButton(withTitle: "Reveal in Finder")
         alert.addButton(withTitle: "Done")
-        
-        // Show some stats from the output
-        if let topLensesRange = output.range(of: "Top 5 most-used lenses:") {
-            let statsText = String(output[topLensesRange.lowerBound...])
-            if let endRange = statsText.range(of: "\n\n") {
-                let stats = String(statsText[..<endRange.lowerBound])
-                alert.informativeText += "\n\n" + stats
-            }
-        }
         
         let response = alert.runModal()
         
